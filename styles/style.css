@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* --------------- Variables --------------- */
+:root {
+  /* colors */
+  --clr-orange: 25, 97%, 53%;
+  --clr-gray-500: 217, 12%, 63%;
+  --clr-gray-900: 213, 19%, 18%;
+  --clr-gray-950: 216, 12%, 8%;
+  --clr-white: 0, 100%, 100%;
+
+  /* typography */
+  --ff-overpass: 'Overpass', sans-serif;
+
+}
+
+/* --------------- Reset styles --------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 15px;
+}
+
+
+/* --------------- Global styles --------------- */
+body {
+  font-family: var(--ff-overpass);
+  background-color: hsl(var(--clr-gray-950));
+  color: hsl(var(--clr-white));
+  font-weight: normal;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  margin-bottom: .5rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  font-size: 1rem;
+}
+
+
+/* --------------- Layout styles --------------- */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* --------------- Components styles --------------- */
+
+
+.card {
+  max-width: 400px;
+  background-color: hsl(var(--clr-gray-900));
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 1.875rem;
+}
+
+.card .card__content {
+  margin: 1.5rem 0;
+}
+
+.card .card__content p {
+  color: hsl(var(--clr-gray-500));
+}
+
+
+/* --------------- Rating card styles --------------- */
+.card .card-rating {
+  text-align: start;
+}
+
+.card--rating .card__image {
+  background-color: hsla(var(--clr-gray-500), 0.2);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card--rating .rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.5rem 0;
+
+}
+
+.card--rating .rating__button {
+  background-color: hsla(var(--clr-gray-500), 0.2);
+  color: hsl(var(--clr-gray-500));
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card--rating .submit__button {
+  display: block;
+  width: 100%;
+  background-color: hsl(var(--clr-orange));
+  color: hsl(var(--clr-gray-950));
+  text-transform: uppercase;
+  border-radius: 20px;
+  padding: 10px 0;
+  letter-spacing: 5px;
+}
+
+/* Card rating button states */
+.card--rating .rating__button:hover {
+  background-color: hsl(var(--clr-orange));
+  color: hsl(var(--clr-gray-950));
+}
+
+.card--rating .rating__button:active, 
+.card--rating .submit__button:hover,
+.card--rating .active
+ {
+  background-color: hsl(var(--clr-white));
+  color: hsl(var(--clr-gray-950));
+}
+
+
+/* --------------- Thank you card styles --------------- */
+.card--thank-you {
+  text-align: center;
+}
+
+.thank-you__rating {
+  display: inline-block;
+  color: hsl(var(--clr-orange));
+  background-color: hsla(var(--clr-orange), .05);
+  margin: 1.5rem auto 0;
+  padding: 0.5rem 1.25rem;
+  border-radius: 20px;
+}
+
+/* --------------- Animations --------------- */
+
+/* Fade in  */
+.fade-in {
+  animation: fadeIn 0.5s forwards;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Fade out */
+.fade-out {
+  animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
